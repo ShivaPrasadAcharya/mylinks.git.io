@@ -1,7 +1,7 @@
 // Sample data structure for links
 const links = [
     {
-        id: 1,
+        id: 3,
         title: "Google",
         linkName: "Search Engine Homepage",
         category: "Search Engine",
@@ -17,7 +17,7 @@ const links = [
         dateCreated: "2025-02-18T21:53:09+05:45"
     },
     {
-        id: 3,
+        id: 1,
         title: "Stack Overflow",
         linkName: "Developer Q&A Site",
         category: "Development",
