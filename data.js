@@ -3,7 +3,7 @@ const links = [
 {
     id: 9,
     title: "bail-jail",
-    linkName: "order attached, bail, rabi lamichanne, rupandehi district court",
+    linkName: "order attached, bail, rabi lamichanne, rupandehi district court, sahakari",
     category: "bail-jail",
     link: "https://www.onlinekhabar.com/2025/01/1612059/this-is-the-rupandehi-courts-order-demanding-rs-10-million-bail-from-ravi-full-text",
     dateCreated: "2025-02-19T11:37:27.429Z"
