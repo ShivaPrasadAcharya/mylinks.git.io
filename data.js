@@ -1,13 +1,13 @@
 // Sample data structure for links
 const links = [
-    {
-        id: 3,
-        title: "Google",
-        linkName: "Search Engine Homepage",
-        category: "Search Engine",
-        link: "https://www.google.com",
-        dateCreated: "2025-02-18T21:53:09+05:45"
-    },
+   {
+    id: 3,
+    title: "Portfolio of Justices (न्यायाधीशको मर्यादाक्रम)",
+    linkName: "Constitutional Bench, Full Decision",
+    category: "Supreme Court",
+    link: "https://www.onlinekhabar.com/2025/01/1599123/supreme-court-order-chief-justice-and-judges-should-be-placed-in-the-order-of-precedence-after-the-prime-minister-and-ministers",
+    dateCreated: "2025-02-19T08:26:01.211Z"
+},
 {
     id: 2,
     title: "Nepali Students Chased away",
