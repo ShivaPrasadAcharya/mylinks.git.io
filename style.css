@@ -100,10 +100,13 @@
 }
 
 .search-box {
-    flex: 0;
-    max-width: 32px;
-    transition: all 0.3s ease;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 20px;
+    padding: 4px 8px;
+    width: 100%; /* Make search box take full width */
+    max-width: 600px; /* Set a reasonable maximum width */
 }
 
 .search-box.expanded {
@@ -287,8 +290,10 @@ h1 i {
 
 .search-section {
     display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
+    align-items: center;
+    flex: 1; /* Take remaining space */
+    max-width: 800px; /* Adjust this value based on your needs */
+    margin: 0 20px;
 }
 
 .search-box, .category-box {
@@ -299,6 +304,11 @@ h1 i {
 .search-box {
     display: flex;
     align-items: center;
+    background: #f1f1f1;
+    border-radius: 20px;
+    padding: 4px 8px;
+    width: 100%; /* Make search box take full width */
+    max-width: 600px; /* Set a reasonable maximum width */
 }
 
 .search-box input {
@@ -602,6 +612,28 @@ input:focus, select:focus {
     100% { transform: scale(1); }
 }
 
+/* Search highlight styles */
+.search-highlight {
+    background-color: #ffeb3b;  /* Light yellow for regular matches */
+    padding: 2px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.search-highlight.active {
+    background-color: #ff9800;  /* Orange for active match */
+    color: #000;
+    box-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+/* Ensure smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Print Styles */
 @media print {
     .search-section,
@@ -652,4 +684,172 @@ input:focus, select:focus {
     margin: 0;
     color: #666;
     font-size: 0.9em;
+}
+
+/* Index Styles */
+.index-panel {
+    position: fixed;
+    top: 60px; /* Below the header */
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: calc(100vh - 60px);
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 998;
+    overflow-y: auto;
+}
+
+.index-panel.show {
+    left: 0;
+}
+
+.index-content {
+    padding: 10px;
+}
+
+.index-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+.index-list li {
+    margin: 2px 0;
+    padding: 4px 6px;
+    color: #495057;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.index-list li:last-child {
+    border-bottom: none;
+}
+
+.index-list li strong {
+    color: #212529;
+    margin-right: 3px;
+    font-size: 12px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header-control-btn {
+    position: relative;
+    padding: 8px;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-control-btn:hover,
+.header-control-btn.active {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.header-control-btn i {
+    font-size: 16px;
+}
+
+.header-controls #indexBtn {
+    display: none;
+}
+
+.search-trigger,
+.voice-search-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+#searchInput {
+    flex: 1; /* Make input take all available space */
+    border: none;
+    background: none;
+    padding: 8px;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.control-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 10px;
+}
+
+/* Update header control button styles */
+.header-control-btn {
+    position: relative;
+    padding: 8px;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-control-btn:hover,
+.header-control-btn.active {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Specific styles for index button */
+#indexBtn {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#indexBtn i {
+    font-size: 18px;
+}
+
+#indexBtn:hover i,
+#indexBtn.active i {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
