@@ -62,25 +62,30 @@ function highlightSearchMatches(query) {
     currentSearchMatches = [];
 
     elements.forEach(card => {
-        const textElements = card.querySelectorAll('h3, .link-name, .category, .date, a, .link-id');
+        // Select all text elements within the card
+        const textElements = card.querySelectorAll('h3, .link-name, .category, .date, a, .link-id, .link-url');
         let hasMatch = false;
 
         textElements.forEach(element => {
             const originalText = element.textContent;
             const lowerText = originalText.toLowerCase();
-            const queryRegex = new RegExp(query.toLowerCase(), 'g');
+            const queryRegex = new RegExp(query.toLowerCase(), 'gi'); // 'gi' for global and case-insensitive
             
             if (lowerText.includes(query.toLowerCase())) {
                 hasMatch = true;
+                // Preserve the original case of the matched text
                 const highlightedText = originalText.replace(queryRegex, match => 
                     `<span class="search-highlight">${match}</span>`
                 );
                 element.innerHTML = highlightedText;
                 
-                // Add each match to the matches array
+                // Add each match position to the matches array
                 const matches = [...lowerText.matchAll(queryRegex)];
                 matches.forEach(() => {
-                    currentSearchMatches.push(card);
+                    currentSearchMatches.push({
+                        card: card,
+                        element: element
+                    });
                 });
             }
         });
@@ -112,20 +117,46 @@ function updateSearchCount() {
 
 function updateActiveMatch() {
     // Remove active class from all highlights
-    document.querySelectorAll('.search-highlight.active').forEach(el => {
-        el.classList.remove('active');
-    });
+    const matches = document.querySelectorAll('.search-highlight');
+    matches.forEach(match => match.classList.remove('active'));
 
     if (currentMatchIndex >= 0 && currentSearchMatches.length > 0) {
-        const currentCard = currentSearchMatches[currentMatchIndex];
-        const highlights = currentCard.querySelectorAll('.search-highlight');
-        if (highlights.length > 0) {
-            highlights[0].classList.add('active');
-            currentCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const currentMatch = currentSearchMatches[currentMatchIndex];
+        const highlight = currentMatch.element.querySelector('.search-highlight');
+        
+        if (highlight) {
+            highlight.classList.add('active');
+            // Smooth scroll to the active match
+            currentMatch.card.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
         }
     }
 
+    // Update navigation buttons
+    const prevBtn = document.getElementById('prevMatch');
+    const nextBtn = document.getElementById('nextMatch');
+    
+    prevBtn.disabled = currentMatchIndex <= 0;
+    nextBtn.disabled = currentMatchIndex === -1 || currentMatchIndex >= currentSearchMatches.length - 1;
+    
+    // Update search count
     updateSearchCount();
+}
+
+function nextMatch() {
+    if (currentMatchIndex < currentSearchMatches.length - 1) {
+        currentMatchIndex++;
+        updateActiveMatch();
+    }
+}
+
+function prevMatch() {
+    if (currentMatchIndex > 0) {
+        currentMatchIndex--;
+        updateActiveMatch();
+    }
 }
 
 function setupSearchBox() {
@@ -138,19 +169,8 @@ function setupSearchBox() {
         searchLinks(e.target.value);
     });
 
-    prevBtn.addEventListener('click', () => {
-        if (currentMatchIndex > 0) {
-            currentMatchIndex--;
-            updateActiveMatch();
-        }
-    });
-
-    nextBtn.addEventListener('click', () => {
-        if (currentMatchIndex < currentSearchMatches.length - 1) {
-            currentMatchIndex++;
-            updateActiveMatch();
-        }
-    });
+    prevBtn.addEventListener('click', prevMatch);
+    nextBtn.addEventListener('click', nextMatch);
 
     // Voice search setup
     if ('webkitSpeechRecognition' in window) {
