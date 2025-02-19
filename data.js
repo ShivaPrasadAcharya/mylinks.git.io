@@ -10,7 +10,7 @@ const links = [
 },
    {
     id: 5,
-    title: "Hearing Broadcasting (सार्वजनिक सरोकारको विषयको प्रसारण)",
+    title: "Hearing Broadcasting (सार्वजनिक सरोकारको विषयको बहस प्रसारण)",
     linkName: "single bench order, show cause order, order against court administration, ",
     category: "Supreme Court",
     link: "https://www.onlinekhabar.com/2024/09/1540404/why-not-broadcast-live-on-public-issues",
