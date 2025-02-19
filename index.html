@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <div class="header-controls">
@@ -19,6 +20,9 @@
 
     <header class="fixed-header">
         <div class="header-content">
+          <button id="indexBtn" class="header-control-btn" title="Toggle Index" type="button">
+            <i class="fas fa-list-ul" aria-hidden="true"></i>
+          </button>
           <h1 class="header-title"><i class="fas fa-link" aria-hidden="true"></i> <a href="https://github.com/ShivaPrasadAcharya/mylinks.git.io/edit/main/data.js" target="_blank">Go2Data</a></h1>
 
             
@@ -36,10 +40,10 @@
                     <div class="search-controls">
                         <span id="searchCount" class="search-count" aria-live="polite">Match: 0/0</span>
                         <div class="search-navigation">
-                            <button id="prevMatch" class="nav-btn" disabled type="button" aria-label="Previous match">
+                            <button id="prevMatch" class="nav-btn" disabled type="button" aria-label="Previous match" onclick="prevMatch()">
                                 <i class="fas fa-chevron-up" aria-hidden="true"></i>
                             </button>
-                            <button id="nextMatch" class="nav-btn" disabled type="button" aria-label="Next match">
+                            <button id="nextMatch" class="nav-btn" disabled type="button" aria-label="Next match" onclick="nextMatch()">
                                 <i class="fas fa-chevron-down" aria-hidden="true"></i>
                             </button>
                         </div>
