@@ -1,6 +1,14 @@
 // Sample data structure for links
 const links = [
 {
+    id: 10,
+    title: "Government Formation Issue",
+    linkName: "3-full bench, 080-WF-0056, kedar karki vs. higmat kumar karki, full decision attached, koshi province",
+    category: "Province",
+    link: "https://www.ratopati.com/story/458638/the-full-text-of-the-koshi-government-formation-controversy-has-been-released",
+    dateCreated: "2025-02-19T11:51:42.949Z"
+},
+{
     id: 9,
     title: "bail-jail",
     linkName: "order attached, bail, rabi lamichanne, rupandehi district court, sahakari",
