@@ -1,6 +1,14 @@
 // Sample data structure for links
 const links = [
    {
+    id: 6,
+    title: "Timely Justice",
+    linkName: "5 Full Bench Decision, Not to exceed 6 months for bail-jail, dharauti, imprisonment, Banking Offence",
+    category: "Supreme Court",
+    link: "https://www.onlinekhabar.com/2024/09/1538306/those-who-cannot-pay-the-bail-shall-not-be-imprisoned-for-more-than-6-months",
+    dateCreated: "2025-02-19T08:43:12.364Z"
+},
+   {
     id: 5,
     title: "Hearing Broadcasting (सार्वजनिक सरोकारको विषयको प्रसारण)",
     linkName: "single bench order, show cause order, order against court administration, ",
