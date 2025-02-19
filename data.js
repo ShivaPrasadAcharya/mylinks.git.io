@@ -8,14 +8,14 @@ const links = [
         link: "https://www.google.com",
         dateCreated: "2025-02-18T21:53:09+05:45"
     },
-    {
-        id: 2,
-        title: "GitHub",
-        linkName: "Code Repository Platform",
-        category: "Development",
-        link: "https://github.com",
-        dateCreated: "2025-02-18T21:53:09+05:45"
-    },
+{
+    id: 3,
+    title: "Nepali Students Chased away",
+    linkName: "Pakriti Lamsal, KIIT University India, suicide",
+    category: "Press Release",
+    link: "https://www.onlinekhabar.com/2025/02/1626158/what-did-the-college-say-about-the-suspicious-death-of-a-nepali-student-in-india",
+    dateCreated: "2025-02-19T08:01:31.974Z"
+},
 {
     id: 1,
     title: "कुटनीतिक ध्यानाकर्षण",
