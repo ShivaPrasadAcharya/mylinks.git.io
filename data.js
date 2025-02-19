@@ -9,7 +9,7 @@ const links = [
         dateCreated: "2025-02-18T21:53:09+05:45"
     },
 {
-    id: 3,
+    id: 2,
     title: "Nepali Students Chased away",
     linkName: "Pakriti Lamsal, KIIT University India, suicide, original press release",
     category: "Press Release",
