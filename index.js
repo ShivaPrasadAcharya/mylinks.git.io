@@ -30,7 +30,7 @@ const indexDefinitions = {
     "xwip": "writ issued partially",
     "xei": "election issue",
     "xdli": "delegated legislation issue",
-    "xtc": "transfered case (case transfered by other bench)",
+    "xtc": "transfered case (case transfered by other bench)"
     
     
     // Users can add more entries manually here
