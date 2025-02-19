@@ -16,14 +16,14 @@ const links = [
         link: "https://github.com",
         dateCreated: "2025-02-18T21:53:09+05:45"
     },
-    {
-        id: 1,
-        title: "Stack Overflow",
-        linkName: "Developer Q&A Site",
-        category: "Development",
-        link: "https://stackoverflow.com",
-        dateCreated: "2025-02-18T21:53:09+05:45"
-    }
+{
+    id: 1,
+    title: "कुटनीतिक ध्यानाकर्षण",
+    linkName: "KIIT University, Pakriti Lamsal, Suicide, original letter",
+    category: "Diplomacy",
+    link: "https://www.onlinekhabar.com/2025/02/1626143/kiit-has-said-it-will-arrange-for-nepali-students-to-study-and-stay",
+    dateCreated: "2025-02-19T07:38:48.831Z"
+}
 ];
 
 // Function to save links to localStorage
