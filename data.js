@@ -5,7 +5,7 @@ const links = [
     title: "legitimacy of oath",
     linkName: "oath, president, cj, gopal parajuli, factum valet, sb, sapana, shiva",
     category: "politico-legal case",
-    link: "https://supremecourt.gov.np/web/assets/downloads//judgements/%E0%A4%86%E0%A4%A6%E0%A5%87%E0%A4%B6_%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AB_%E0%A5%A6%E0%A5%AC_%E0%A5%A6%E0%A5%AA.pdf",
+    link: "https://www.onlinekhabar.com/2025/02/1629127/nepal-falls-on-money-laundering-gray-list-for-the-second-time",
     dateCreated: "2025-02-21T13:11:57.797Z"
 },
 {
