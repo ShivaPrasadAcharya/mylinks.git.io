@@ -1,6 +1,14 @@
 // Sample data structure for links
 const links = [
 {
+    id: 14,
+    title: "legitimacy of oath",
+    linkName: "oath, president, cj, gopal parajuli, factum valet, sb, sapana, shiva",
+    category: "politico-legal case",
+    link: "https://supremecourt.gov.np/web/assets/downloads//judgements/%E0%A4%86%E0%A4%A6%E0%A5%87%E0%A4%B6_%E0%A5%A8%E0%A5%A6%E0%A5%AD%E0%A5%AB_%E0%A5%A6%E0%A5%AC_%E0%A5%A6%E0%A5%AA.pdf",
+    dateCreated: "2025-02-21T13:11:57.797Z"
+},
+{
     id: 13,
     title: "FPO & BPG case",
     linkName: "dissenting opinion, cb, share, income tax, shiva, anandamohan bhattarai, investment bank\nlegitimate expectation, restrospectivity,   circulars, merger and agquisition, bonus from capital fund",
