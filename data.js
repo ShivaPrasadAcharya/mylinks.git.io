@@ -1,13 +1,13 @@
 // Sample data structure for links
 const links = [
 {
-    id: 15,
-    title: "legitimacy of oath",
-    linkName: "oath, president, cj, gopal parajuli, factum valet, sb, sapana, shiva",
-    category: "politico-legal case",
-    link: "https://www.onlinekhabar.com/2025/02/1629127/nepal-falls-on-money-laundering-gray-list-for-the-second-time",
-    dateCreated: "2025-02-21T13:11:57.797Z"
-},
+    id: 14,
+    title: "trial",
+    linkName: "ok ok",
+    category: "trial",
+    link: "shiva.com.np",
+    dateCreated: "2025-02-22T04:05:31.126Z"
+}
 {
     id: 13,
     title: "FPO & BPG case",
